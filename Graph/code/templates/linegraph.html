@@ -7,7 +7,7 @@
 <body>
   <canvas id="myChart1" width="1000" height="400"></canvas>
   <canvas id="myChart2" width="1000" height="400"></canvas>
-  <canvas id="myChart3" width="1000" height="400"></canvas>
+ <canvas id="myChart3" width="1000" height="400"></canvas>
   <!-- <canvas id="myChart4" width="1000" height="400"></canvas>
   <canvas id="myChart5" width="1000" height="400"></canvas>
   <canvas id="myChart6" width="1000" height="400"></canvas>
@@ -69,8 +69,18 @@
                 pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
                 fill:false,
                 data: commits
+            }, 
+            {
+                label: "Defect Density",
+                borderColor: randomColorC,
+                strokeColor: randomColorC,
+                pointColor: randomColorC,
+                pointHoverBorderColor: randomColorC,
+                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
+                fill:false,
+                data: defect_density
             }]
-        },
+            },
         options: {
             scales: {
                 xAxes: [{

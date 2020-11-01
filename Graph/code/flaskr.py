@@ -7,14 +7,11 @@ from flask import Flask, g, render_template
 from contextlib import closing
 
 # Extracting name from args
-# dbname = sys.argv[1].split("/")[-1]
-# print(dbname)
-
-# argparser? argparse? 
-
-with open("TestDatabase.db", "r") as foo:
+##dbname = sys.argv[1].split("/")[-1]
+with open("TestTestDatabase.db", "r") as foo:
     print("Hello World")
     foo.close()
+
 
 # create our little application :)
 app = Flask(__name__)
@@ -22,7 +19,7 @@ app = Flask(__name__)
 # configuration
 app.config.update(
     dict(
-        DATABASE="TestDatabase.db",
+        DATABASE=str("TestTestDatabase.db"),
     )
 )
 
@@ -50,19 +47,19 @@ def stacked_bar_chart():
     date = df["Date"].values.tolist()  # x axis
     defect_density = df["Defect Density"].values.tolist()
     commits = df["Commits per Week"].values.tolist()
-    # issues = df["issues"].values.tolist()
-    # lines_of_code = df["lines_of_code"].values.tolist()
+    #issues = df["issues"].values.tolist()
+    #lines_of_code = df["lines_of_code"].values.tolist()
     issue_spoilage_avg = df["Issue Spoilage"].values.tolist()
     # issue_spoilage_min = df['issue_spoilage_min'].values.tolist()
     # issue_spoilage_max = df["issue_spoilage_max"].values.tolist()
-    # defect_density = df["defect_density"].values.tolist()
+   
 
     return render_template(
         "linegraph.html",
         date=date,
         commits=commits,
-        # issues=issues,
-        # lines_of_code=lines_of_code,
+       # issues=issues,
+       # lines_of_code=lines_of_code,
         defect_density=defect_density,
         issue_spoilage_avg=issue_spoilage_avg,
     )
