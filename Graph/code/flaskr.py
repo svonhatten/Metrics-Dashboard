@@ -55,7 +55,7 @@ def stacked_bar_chart():
    
 
     return render_template(
-        "linegraph.html",
+        "radargraph.html",
         date=date,
         commits=commits,
        # issues=issues,
