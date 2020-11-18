@@ -56,7 +56,7 @@ def stacked_bar_chart():
    
 
     return render_template(
-        "doughnutpie.html",
+        "polararea.html",
         date=date,
         commits=commits,
        # issues=issues,
