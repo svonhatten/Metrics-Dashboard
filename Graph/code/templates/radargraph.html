@@ -61,35 +61,38 @@
         data: {
             labels: ['Commits', 'Defect Density', 'Issue Spoilage'],
             datasets: [{
-                label: "Person 1",
-                borderColor: randomColorC,
-                strokeColor: randomColorC,
-                pointColor: randomColorC,
-                pointHoverBorderColor: randomColorC,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:false,
-                data: commits
-            }, 
-            {
-                label: "Person 2",
-                borderColor: randomColorDD,
-                strokeColor: randomColorDD,
-                pointColor: randomColorDD,
-                pointHoverBorderColor: randomColorDD,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:false,
-                data: defect_density
-            },
-            {
-                label: 'Person 3',
-                borderColor: randomColorI,
-                strokeColor: randomColorI,
-                pointColor: randomColorI,
-                pointHoverBorderColor: randomColorI,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:false,
-                data: issue_spoilage_avg
+                data: [commits, defect_density, issue_spoilage_avg]
             }]
+            // datasets: [{
+            //     label: "Person 1",
+            //     borderColor: randomColorC,
+            //     strokeColor: randomColorC,
+            //     pointColor: randomColorC,
+            //     pointHoverBorderColor: randomColorC,
+            //     pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
+            //     fill:false,
+            //     data: commits
+            // }, 
+            // {
+            //     label: "Person 2",
+            //     borderColor: randomColorDD,
+            //     strokeColor: randomColorDD,
+            //     pointColor: randomColorDD,
+            //     pointHoverBorderColor: randomColorDD,
+            //     pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
+            //     fill:false,
+            //     data: defect_density
+            // },
+            // {
+            //     label: 'Person 3',
+            //     borderColor: randomColorI,
+            //     strokeColor: randomColorI,
+            //     pointColor: randomColorI,
+            //     pointHoverBorderColor: randomColorI,
+            //     pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
+            //     fill:false,
+            //     data: issue_spoilage_avg
+            // }]
         },
         options: {
             scales: {
