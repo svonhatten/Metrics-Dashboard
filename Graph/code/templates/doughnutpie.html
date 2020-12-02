@@ -61,40 +61,7 @@
         data: {
             labels: ['Commits', 'Defect Density', 'Issue Spoilage'],
             datasets: [{
-                label: "Commits per Week",
-                borderColor: randomColorC,
-                backgroundColor: randomColorC,
-                borderAlign: 'inner',
-                strokeColor: randomColorC,
-                pointColor: randomColorC,
-                pointHoverBorderColor: randomColorC,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:true,
-                data: commits
-            }, 
-            {
-                label: "Defect Density",
-                borderColor: randomColorDD,
-                backgroundColor: randomColorDD,
-                borderAlign: 'inner',
-                strokeColor: randomColorDD,
-                pointColor: randomColorDD,
-                pointHoverBorderColor: randomColorDD,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:true,
-                data: defect_density
-            },
-            {
-                label: 'Issue Spoilage',
-                borderColor: randomColorI,
-                backgroundColor: randomColorI,
-                borderAlign: 'inner',
-                strokeColor: randomColorI,
-                pointColor: randomColorI,
-                pointHoverBorderColor: randomColorI,
-                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
-                fill:true,
-                data: issue_spoilage_avg
+                data: [commits, defect_density, issue_spoilage_avg]
             }]
         },
         options: {
