@@ -61,7 +61,13 @@
         data: {
             labels: ['Commits', 'Defect Density', 'Issue Spoilage'],
             datasets: [{
-                data: [commits, defect_density, issue_spoilage_avg]
+                data: [commits, defect_density, issue_spoilage_avg],
+                borderColor: [randomColorC, randomColorDD, randomColorISA],
+                strokeColor: [randomColorC, randomColorDD, randomColorISA],
+                pointColor: [randomColorC, randomColorDD, randomColorISA],
+                pointHoverBorderColor: [randomColorC, randomColorDD, randomColorISA],
+                pointHoverBackgroundColor: "rgba(75, 192, 192, 0.2)",
+                fill: false,
             }]
             // datasets: [{
             //     label: "Person 1",
