@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bar Chart</title>
+<title>Doughnut Chart</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 </head>
 <body>
@@ -59,10 +59,11 @@
     var myChart1 = new Chart(ctx1, {
         type: 'doughnut',
         data: {
-            labels: ['Commits', 'Defect Density', 'Issue Spoilage'],
             datasets: [{
-                data: [commits, defect_density, issue_spoilage_avg]
-            }]
+                data: [commits[0], defect_density[0], issue_spoilage_avg[0]],
+                backgroundColor: [randomColorC, randomColorDD, randomColorISA]
+            }],
+            labels: ['Commits', 'Defect Density', 'Issue Spoilage'],
         },
         options: {
             scales: {
